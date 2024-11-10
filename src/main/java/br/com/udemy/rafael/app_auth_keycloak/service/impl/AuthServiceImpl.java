@@ -28,7 +28,7 @@ public class AuthServiceImpl implements AuthService {
 
         HttpEntity<MultiValueMap<String, String>> request = new HttpEntity<>(formData, headers);
         var result = restTemplate.postForEntity(
-                "http://127.0.0.1:8080/realms/poc-keycloak/protocol/openid-connect/token",
+                "http://localhost:8080/realms/app_poc_keycloak/protocol/openid-connect/token",
                 request,
                 String.class
         );
